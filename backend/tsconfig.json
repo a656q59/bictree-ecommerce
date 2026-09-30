@@ -1,0 +1,27 @@
+{
+  // Compiles the Express API to CommonJS so ts-node-dev, Node, and Jest
+  // can run the same output without ESM loader setup.
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    "module": "CommonJS",
+    // TypeScript 7 removed the old "node" resolution mode. "bundler" still
+    // allows extensionless imports, and "module": "commonjs" emits require().
+    "moduleResolution": "Node",
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "types": ["node"],
+
+    "sourceMap": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

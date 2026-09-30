@@ -1,0 +1,20 @@
+{
+  // Compiles the seed script and the source files it imports. The main
+  // tsconfig only includes src, so this project gives the seed its own output.
+  "compilerOptions": {
+    "rootDir": "..",
+    "outDir": "../dist-seed",
+    "module": "commonjs",
+    "moduleResolution": "bundler",
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "types": ["node"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": ["./**/*.ts", "../src/**/*.ts"]
+}
